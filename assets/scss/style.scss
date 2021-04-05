@@ -1,0 +1,247 @@
+$primary_color: #99EFD0;
+$text: #8476AA;
+
+@mixin btns { 
+   color: #F2994A;
+   border: 1px solid #F2994A;
+   border-radius: 5px;
+   background-color: transparent;
+   padding: 5px;
+   
+   &:hover {
+      background-color: #F2994A;
+      color: #FFFFFF;
+   }
+}
+
+body {
+   background: linear-gradient(to right ,#040D3E, #3B1D60,);
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+.header {
+   position: relative;
+   height: 1000px;
+   padding: 1px;
+   
+   .nav {
+      position: sticky;
+      top: 0;
+      width: 1100px;
+      margin: 1px auto;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between   ;
+      border: 1px solid deeppink;
+
+      &_list {
+         display: flex;
+         margin-top: 20px;
+         &__items {
+            padding: 0;
+            color: #B5B5B5;
+            font-size: 12px;
+            margin: 10px;
+            text-transform: uppercase;
+            list-style-type: none;
+         }
+      }
+      &_form {
+         margin-top: 14px;
+         button {
+            @include btns;
+            margin: 10px;
+            width: 115px;
+            &:last-child {
+               margin-right: 40px;
+            }
+         }
+      }
+   }
+   &_info {
+      width: 540px;
+      padding: 1px;
+      margin-left: 170px;
+      margin-top: 135px;
+      &__heading {
+         margin: 0;
+         font-size: 44px;
+         font-weight: 700;
+         line-height: 50px;
+         color: $primary_color;
+      }
+      &__text {
+         color: $text;
+         font-size: 18px;
+         line-height: 22px;
+      }
+      &__form {
+         margin-top: 40px;
+         padding: 0px;
+         
+         button {
+            @include btns;
+            width: 120px;
+            padding: 10px;
+            &:last-child {
+               margin-left: 10px;
+            }
+         }
+      }
+      img {
+         position: absolute;
+         top: 225px;
+         right: 5px;
+      }
+      &__media {
+         margin-top: 60px;
+         padding: 0;
+
+         blockquote {
+            color: $text;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 10px 0 0 0;
+         }
+      }
+   }
+   &_logos {
+      width: 1100px;
+      padding: 0;
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-around;
+   }
+}
+
+// About
+
+.about {
+   padding: 1px;
+   position: relative;
+   &_wrapper {
+      width: 1100px;
+      margin: 0 auto;
+      margin-top: 105px;
+      &>h1{
+         padding: 0;
+         margin: 0;
+         color: $primary_color;
+         text-align: center;
+         font-size: 42px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 50px;
+         letter-spacing: 0px;
+      }
+      &>p {
+         // font-family: Gilroy-SemiBold;
+         color: $text;
+         font-size: 16px;
+         line-height: 22px;
+         text-align: center;
+         padding: 0;
+         margin-top: 13px;
+         margin-bottom: 50px;
+      }
+   }
+
+   &_info {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      
+      &__box {
+         width: 299px;
+         margin-top: 10px;
+         
+         &>h2 {
+            margin: 0;
+            padding: 0;
+            color: $primary_color;
+            font-family: Gilroy-Bold;
+            font-size: 18px;
+            line-height: 22px;
+         }
+
+         &>p {
+            padding: 0;
+            font-family: Gilroy-SemiBold;
+            font-size: 14px;
+            line-height: 22px;
+            color: $text;
+         }
+      }
+   }
+   &>img:first-of-type {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      opacity: 0.1;
+   }
+
+   &>img:last-of-type {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      opacity: 0.1;
+   }
+}
+
+// Offer
+
+.offer {
+   padding: 1px;
+   margin: 0;
+   height: 1000px;
+
+   &_info {
+      width: 1100px;
+      margin: 0 auto;
+      margin-top: 220px;
+   }
+
+   &_text {
+      width: 400px;
+
+      &>h3 {
+         margin: 0;
+         padding: 0;
+         color: $primary_color;
+         font-family: Inter;
+         font-weight: 700;
+         line-height: 50px;
+         font-size: 42px;
+         letter-spacing: 2px;
+         
+         span {
+            color: #F2994A;
+         }
+      }
+
+      &>p {
+         margin-top: 32px;
+         padding: 0;
+         color: $text;
+         font-family: Gilroy-SemiBold;
+         line-height: 28px;
+         letter-spacing: 0.5px;
+         font-size: 15px;
+         text-align: left;
+      }
+
+      &>button {
+         @include btns;
+         width: 120px;
+         margin-top: 43px;
+         padding: 10px;
+      }
+   }
+}
