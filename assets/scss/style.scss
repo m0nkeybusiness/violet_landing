@@ -1,13 +1,14 @@
 $primary_color: #99EFD0;
 $text: #8476AA;
+$orange: #F2994A;
 
-@mixin btns { 
+@mixin btns {
    color: #F2994A;
    border: 1px solid #F2994A;
    border-radius: 5px;
    background-color: transparent;
    padding: 5px;
-   
+
    &:hover {
       background-color: #F2994A;
       color: #FFFFFF;
@@ -15,31 +16,34 @@ $text: #8476AA;
 }
 
 body {
-   background: linear-gradient(to right ,#040D3E, #3B1D60,);
+   background: linear-gradient(to right, #040D3E, #3B1D60, );
    box-sizing: border-box;
    margin: 0;
    padding: 0;
    position: relative;
+   min-width: 1000px;
 }
 
 .header {
+   margin: 0 auto;
    position: relative;
-   height: 1000px;
    padding: 1px;
-   
+
    .nav {
+      background: linear-gradient(to right, #040D3E, #3B1D60, );
       position: sticky;
       top: 0;
       width: 1100px;
       margin: 1px auto;
       margin-top: 10px;
       display: flex;
-      justify-content: space-between   ;
+      justify-content: space-between;
       border: 1px solid deeppink;
 
       &_list {
          display: flex;
          margin-top: 20px;
+
          &__items {
             padding: 0;
             color: #B5B5B5;
@@ -49,58 +53,68 @@ body {
             list-style-type: none;
          }
       }
+
       &_form {
          margin-top: 14px;
+
          button {
             @include btns;
             margin: 10px;
             width: 115px;
+
             &:last-child {
                margin-right: 40px;
             }
          }
       }
    }
+
    &_info {
-      width: 540px;
+      width: 1100px;
       padding: 1px;
-      margin-left: 170px;
+      margin: 0 auto;
       margin-top: 135px;
+      background-image: url('../images/bgImages/Frame.png');
+      background-repeat: no-repeat;
+      background-position: 140% 15%;
+
       &__heading {
+         width: 531px;
          margin: 0;
          font-size: 44px;
          font-weight: 700;
          line-height: 50px;
          color: $primary_color;
       }
+
       &__text {
+         width: 468px;
          color: $text;
          font-size: 18px;
          line-height: 22px;
       }
+
       &__form {
          margin-top: 40px;
          padding: 0px;
-         
+
          button {
             @include btns;
             width: 120px;
             padding: 10px;
+
             &:last-child {
                margin-left: 10px;
             }
          }
       }
-      img {
-         position: absolute;
-         top: 225px;
-         right: 5px;
-      }
+
       &__media {
          margin-top: 60px;
          padding: 0;
 
          blockquote {
+            width: 380px;
             color: $text;
             font-size: 18px;
             line-height: 22px;
@@ -108,6 +122,7 @@ body {
          }
       }
    }
+
    &_logos {
       width: 1100px;
       padding: 0;
@@ -124,11 +139,13 @@ body {
 .about {
    padding: 1px;
    position: relative;
+
    &_wrapper {
       width: 1100px;
       margin: 0 auto;
       margin-top: 105px;
-      &>h1{
+
+      &>h1 {
          padding: 0;
          margin: 0;
          color: $primary_color;
@@ -139,6 +156,7 @@ body {
          line-height: 50px;
          letter-spacing: 0px;
       }
+
       &>p {
          // font-family: Gilroy-SemiBold;
          color: $text;
@@ -157,11 +175,11 @@ body {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      
+
       &__box {
          width: 299px;
          margin-top: 10px;
-         
+
          &>h2 {
             margin: 0;
             padding: 0;
@@ -180,19 +198,20 @@ body {
          }
       }
    }
-   &>img:first-of-type {
-      position: absolute;
-      top: 0;
-      left: 20px;
-      opacity: 0.1;
-   }
 
-   &>img:last-of-type {
-      position: absolute;
-      top: 20px;
-      right: 10px;
-      opacity: 0.1;
-   }
+   // &>img:first-of-type {
+   //    position: absolute;
+   //    top: 0;
+   //    left: 20px;
+   //    opacity: 0.1;
+   // }
+
+   // &>img:last-of-type {
+   //    position: absolute;
+   //    top: 20px;
+   //    right: 10px;
+   //    opacity: 0.1;
+   // }
 }
 
 // Offer
@@ -200,12 +219,14 @@ body {
 .offer {
    padding: 1px;
    margin: 0;
-   height: 1000px;
 
    &_info {
       width: 1100px;
       margin: 0 auto;
-      margin-top: 220px;
+      padding-top: 220px;
+      padding-bottom: 215px;
+      display: flex;
+      justify-content: space-between;
    }
 
    &_text {
@@ -220,7 +241,7 @@ body {
          line-height: 50px;
          font-size: 42px;
          letter-spacing: 2px;
-         
+
          span {
             color: #F2994A;
          }
@@ -242,6 +263,69 @@ body {
          width: 120px;
          margin-top: 43px;
          padding: 10px;
+      }
+   }
+
+   &_scale {
+      width: 440px;
+      position: relative;
+         
+      img {
+         position: absolute;
+      }
+
+      img[alt='office_photo'] {
+         z-index: 2;
+         top: -10%;
+         left: 14%;
+      }
+
+      img[alt='histogram']{
+         z-index: 3;
+         left: -13%;
+         top: -5%;
+      }
+
+      img[alt='arrow']{
+         z-index: 4;
+         bottom: -52%;
+         left: 9%;
+      }
+
+      img[alt='dots']{
+         z-index: 1;
+         top: 80%;
+         left: 58%;
+      }
+   }
+}
+
+// FAQ
+
+.faq {
+   margin: 0;
+   padding: 0;
+
+   .faq_info {
+      width: 1100px;
+      margin: 0 auto;
+      padding: 0;
+
+      h3 {
+         margin: 0 auto;
+         width: 800px;
+         font-family: Inter;
+         font-size: 36px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 42px;
+         color: $primary_color;
+         letter-spacing: 0.33000001311302185px;
+         text-align: center;
+            
+         span {
+            color: #F2994A;
+         }
       }
    }
 }
