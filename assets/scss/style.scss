@@ -311,7 +311,7 @@ body {
       margin: 0 auto;
       padding: 0;
 
-      h3 {
+      h4 {
          margin: 0 auto;
          width: 800px;
          font-family: Inter;
@@ -326,6 +326,108 @@ body {
          span {
             color: #F2994A;
          }
+      }
+      &>p {
+         margin: 0 auto;
+         padding-top: 32px;
+         width: 415px;
+         text-align: center;
+         color: $text;
+         font-family: Gilroy-SemiBold;
+         line-height: 20px;
+         letter-spacing: 0.20000000298023224px;
+         font-size: 15px;
+      }
+   }
+
+   .usage_amount {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 48px;
+
+      p {
+         margin: 0;
+         padding: 0;
+         color:$text;
+         width: 291px;
+         text-align: center;
+         font-family: Gilroy-SemiBold;
+         line-height: 20px;
+         letter-spacing: 0.20000000298023224px;
+         font-size: 15px;
+      }
+
+      p::before {
+         display: block;
+         font-family: Inter;
+         font-weight: 700;
+         line-height: 42px;
+         letter-spacing: 0.33000001311302185px;
+         text-align: center;
+         font-size: 36px;
+         color: $primary_color;
+         padding-bottom: 16px;
+      }
+
+      p:first-child::before {
+         content: "100+";
+      }
+
+      p:first-child + p::before {
+         content: "43,000+";
+      }
+
+      p:last-child::before {
+         content: "30+";
+      }
+   }
+}
+
+.create-project {
+   margin: 0;
+   padding: 0;
+
+   div {
+      width: 1100px;
+      height: 530px;
+      margin: 0 auto;
+      padding: 170px;
+      background-image: url('../images/bgImages/field.png');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+
+      h3 {
+         width: 770px;
+         padding: 0 0 45px 0;
+         margin: 0 auto;
+         font-family: Inter;
+         font-weight: 700;
+         line-height: 50px;
+         letter-spacing: 0px;
+         text-align: center;
+         font-size: 42px;
+         color: $primary_color;
+
+         span {
+            color: $orange;
+         }
+
+      }
+
+      button {
+         @include btns;
+         display: block;
+         text-transform: uppercase;
+         width: 140px;
+         padding: 10px;
+         margin: 0 auto;
+         font-size: 12px;
+         font-weight: 500;
+         line-height: 20px;
+         letter-spacing: 2px;
+         text-align: center;
+         font-family: Rubik;
+
       }
    }
 }
